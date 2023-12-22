@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+      <section class="cronometro">
+        <div class="txt-reset">reset</div>
+        <div class="div-reset"></div>
+        <button id="btn-reset" class="reset"></button>
+        <div class="corpo-container">
+          <div class="botoes-container">
+            <div class="botao-container">
+              <button id="btn-color"></button>
+              <span class="txt-color">color</span>
+            </div>
+            <div class="botao-container">
+              <button id="btn-gravar"></button>
+              <span class="txt-gravar">gravar</span>
+            </div>
+            <div class="botao-container">
+                <button id="btn-acessar"></button>
+                <span class="txt-acessar">acessar</span>
+              </div>
+          </div>
+          <div class="corpo">
+            <div class="meio">
+              <div class="display">
+                <span class="material-symbols-outlined battery"> battery_5_bar </span>
+                <div id="min"></div>
+                <div id="sec"></div>
+                <div id="ms"></div>
+                <span id="gravacoes"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="txt-start">start/stop</div>
+        <div class="div-start"></div>
+        <button id="btn-start" class="start"></button>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

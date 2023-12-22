@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+@font-face {
+  font-family: "Calculator";
+  src: url(fontes/Calculator.ttf) format("truetype");
+}
+
+:root {
+  --fontCalc: "Calculator";
+  --font: "Roboto", sans-serif;
+  --cor1: #DA4167;
+  --cor2: #F0BCD4;
+}
+
+/*     GERAIS     */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  font-size: 15px;
+  font-family: var(--font);
+  background-color: rgb(236, 236, 236);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*     CRONOMETRO     */
+
+.cronometro {
+  position: relative;
+}
+
+.corpo {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background-color: var(--cor1);
+  border-radius: 150px 150px 200px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+.meio {
+  width: 260px;
+  height: 260px;
+  background-color: var(--cor2);
+  border-radius: 100px 100px 200px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(124, 124, 124);
+  border-right: 1px solid rgb(124, 124, 124);
+  border-left: 1px solid rgb(80, 80, 80);
+  border-top: 1px solid rgb(80, 80, 80);
+}
+
+.display {
+    position: relative;
+  width: 210px;
+  height: 105px;
+  background-color: rgb(173, 172, 172);
+  border-radius: 10px;
+  align-self: first baseline;
+  margin-top: 50px;
+  outline: 10px solid var(--cor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 58px;
+  font-family: var(--fontCalc);
+  border-bottom: 2px solid rgb(124, 124, 124);
+  border-right: 2px solid rgb(124, 124, 124);
+  border-left: 2px solid rgb(80, 80, 80);
+  border-top: 2px solid rgb(80, 80, 80);
+}
+
+.div-reset {
+  background-color: var(--cor2);
+  width: 30px;
+  height: 80px;
+  position: absolute;
+  z-index: 4;
+  transform: rotate(45deg);
+  border-radius: 5px 0px 0px 5px;
+  top: -5px;
+  left: 20px;
+}
+
+.reset {
+  background-color: var(--cor1);
+  width: 30px;
+  height: 60px;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: 3;
+  top: -10px;
+  left: 5px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.txt-reset {
+  font-size: 18px;
+  position: absolute;
+  transform: rotate(-49deg);
+  z-index: 6;
+  width: 40px;
+  height: 60px;
+  top: 40px;
+  left: 40px;
+}
+
+.reset:active {
+  top: -7px;
+  left: 8px;
+}
+
+.div-start {
+  background-color: var(--cor2);
+  width: 30px;
+  height: 80px;
+  position: absolute;
+  transform: rotate(-45deg);
+  z-index: 4;
+  border-radius: 0px 5px 5px 5px;
+  top: -5px;
+  right: 20px;
+}
+
+.start {
+  background-color: var(--cor1);
+  width: 30px;
+  height: 60px;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 5px;
+  z-index: 3;
+  top: -10px;
+  right: 5px;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.txt-start {
+  font-size: 18px;
+  position: absolute;
+  transform: rotate(49deg);
+  z-index: 6;
+  width: 40px;
+  height: 60px;
+  top: 28px;
+  right: 53px;
+}
+
+.start:active {
+  top: -7px;
+  right: 8px;
+}
+
+#min,
+#sec,
+#ms {
+  margin: 1px;
+  width: 60px;
+}
+
+.botoes-container {
+  width: 150px;
+  height: 50px;
+  z-index: 6;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 250px;
+  left: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.botao-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+
+#btn-color,
+#btn-gravar, #btn-acessar {
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+  background-color: var(--cor1);
+  border-top: 1px solid rgb(124, 124, 124);
+  border-left: 1px solid rgb(124, 124, 124);
+  border-right: 1px solid rgb(80, 80, 80);
+  border-bottom: 1px solid rgb(80, 80, 80);
+}
+
+#btn-color:active,
+#btn-gravar:active, #btn-acessar:active {
+  border-bottom: 1px solid rgb(124, 124, 124);
+  border-right: 1px solid rgb(124, 124, 124);
+  border-top: 1px solid rgb(80, 80, 80);
+  border-left: 1px solid rgb(80, 80, 80);
+}
+
+.battery{
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 0px;
+    right: 10px;
+    opacity: .8;
+}
+
+#gravacoes{
+    position: absolute;
+    font-size: 20px;
+    bottom: 0px;
+}
