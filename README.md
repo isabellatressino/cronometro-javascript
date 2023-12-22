@@ -26,7 +26,7 @@ Um simples cronômetro desenvolvido em HTML, CSS e JavaScript. O cronômetro pos
 
 **OU**
 
-Acesse o [Cronômetro Interativo Online](link-do-site) para experimentar diretamente no seu navegador.
+Acesse o [Cronômetro Interativo Online](https://isabellatressino.github.io/cronometro-javascript/) para experimentar diretamente no seu navegador.
 
 ## Feito Com
 
